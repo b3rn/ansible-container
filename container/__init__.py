@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 
+<<<<<<< HEAD
 __version__ = '0.9.2'
+=======
+__version__ = '0.9.3rc0'
+>>>>>>> upstream/develop
 
 import os
 import functools

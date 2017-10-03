@@ -1,12 +1,12 @@
 Ansible Container has been contribued to by the following authors:
 This list is automatically generated - please file an issue for corrections)
 
-Chris Houseknecht <chouseknecht@ansible.com>
 Joshua "jag" Ginsberg <jag@ansible.com>
+Chris Houseknecht <chouseknecht@ansible.com>
 Ryan Brown <sb@ryansb.com>
 Shubham Minglani <shubham@linux.com>
-Pierre-Louis Bonicoli <pierre-louis@libregerbil.fr>
 Matt Clay <matt@mystile.com>
+Pierre-Louis Bonicoli <pierre-louis@libregerbil.fr>
 Greg DeKoenigsberg <greg.dekoenigsberg@gmail.com>
 Sandra Wills <swills@ansible.com>
 Dusty Mabe <dusty@dustymabe.com>
@@ -19,8 +19,13 @@ Will Refvem <wbrefvem@gmail.com>
 Sebastien Plisson <sebastien.plisson@gmail.com>
 Gerard Braad <me@gbraad.nl>
 Evgeni Golov <evgeni@golov.de>
-Will Thames <wthames@redhat.com>
 Joseph Callen <jcpowermac@gmail.com>
+Will Thames <wthames@redhat.com>
+<<<<<<< HEAD
+Joseph Callen <jcpowermac@gmail.com>
+=======
+Vadim Rutkovsky <roignac@gmail.com>
+>>>>>>> upstream/develop
 Grzegorz Nosek <root@localdomain.pl>
 Abhishek Pratap Singh <abhishek@linux.com>
 Vadim Rutkovsky <roignac@gmail.com>
@@ -42,6 +47,7 @@ Trishna Guha <trishnaguha17@gmail.com>
 Ali Asad Lotia <ali.asad.lotia@gmail.com>
 Chrrrles Paul <chrrrles@users.noreply.github.com>
 Andrea De Pirro <andrea.depirro@yameveo.com>
+<<<<<<< HEAD
 Erik Nelson <erik@nsk.io>
 Jeff Geerling <geerlingguy@mac.com>
 Shea Stewart <shea.stewart@arctiq.ca>
@@ -50,3 +56,6 @@ Aaron Cowdin <aaronthebaron@users.noreply.github.com>
 John R Barker <john@johnrbarker.com>
 Sidharth Surana <ssurana@vmware.com>
 grimmjow <ryanbrown.dev@gmail.com>
+=======
+Jordan Mcmillan <jormcmil@opendns.com>
+>>>>>>> upstream/develop
