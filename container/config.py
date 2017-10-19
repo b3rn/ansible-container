@@ -26,7 +26,8 @@ if container.ENV == 'conductor':
     except ImportError:
         from ansible.vars.unsafe_proxy import AnsibleUnsafeText
 
-from .exceptions import AnsibleContainerConfigException, AnsibleContainerNotInitializedException
+from .exceptions import (AnsibleContainerConfigException, AnsibleContainerNotInitializedException,
+                         AnsibleContainerRequestException)
 from .utils import get_metadata_from_role, get_defaults_from_role
 
 # jag: Division of labor between outer utility and conductor:
@@ -147,6 +148,24 @@ class BaseAnsibleContainerConfig(Mapping):
 
         logger.debug(u"Parsed config", config=config)
         self._config = config
+
+    def set_services(self, services):
+        if not services:
+            return
+        remove_services = list(set(self._config['services']) - set(services))
+        if remove_services:
+            for service in remove_services:
+                del self._config['services'][service]
+
+    def check_requested_services(self, services):
+        if not services:
+            return
+        missing_services = list(set(services) - set(self._config['services'].keys()))
+        if missing_services:
+            tense = '' if len(missing_services) <= 1 else 's'
+            raise AnsibleContainerRequestException(
+                "Requested service{} {} not defined in container.yml".format(tense, ', '.join(missing_services))
+            )
 
     def _update_service_config(self, env, service_config):
         if isinstance(service_config, dict):

@@ -11,7 +11,6 @@ import getpass
 import gzip
 import hashlib
 import io
-import json
 import os
 import re
 import ruamel
@@ -151,6 +150,10 @@ def hostcmd_prebake(distros, debug=False, cache=True, ignore_errors=False):
 def hostcmd_build(base_path, project_name, engine_name, vars_files=None, **kwargs):
     conductor_cache = kwargs['cache'] and kwargs['conductor_cache']
     config = get_config(base_path, vars_files=vars_files, engine_name=engine_name, project_name=project_name)
+
+    requested_services = kwargs.get('services_to_build')
+    config.check_requested_services(requested_services)
+
     engine_obj = load_engine(['BUILD', 'RUN'],
                              engine_name, config.project_name,
                              config['services'], **kwargs)
@@ -240,6 +243,10 @@ def hostcmd_run(base_path, project_name, engine_name, vars_files=None, cache=Tru
     if not kwargs['production']:
         config.set_env('dev')
 
+    services = kwargs.pop('service')
+    config.check_requested_services(services)
+    config.set_services(services)
+
     logger.debug('hostcmd_run configuration', config=config.__dict__)
 
     engine_obj = load_engine(['RUN'],
@@ -298,6 +305,10 @@ def hostcmd_stop(base_path, project_name, engine_name, vars_files=None, force=Fa
     if not kwargs['production']:
         config.set_env('dev')
 
+    services = kwargs.pop('service')
+    config.check_requested_services(services)
+    config.set_services(services)
+
     engine_obj = load_engine(['RUN'],
                              engine_name, config.project_name,
                              config['services'], **kwargs)
@@ -321,6 +332,10 @@ def hostcmd_restart(base_path, project_name, engine_name, vars_files=None, force
     config = get_config(base_path, vars_files=vars_files, engine_name=engine_name,  project_name=project_name)
     if not kwargs['production']:
         config.set_env('dev')
+
+    services = kwargs.pop('service')
+    config.check_requested_services(services)
+    config.set_services(services)
 
     engine_obj = load_engine(['RUN'],
                              engine_name, config.project_name,
@@ -687,6 +702,7 @@ def conductorcmd_build(engine_name, project_name, services, cache=True, local_py
     engine = load_engine(['BUILD'], engine_name, project_name, services, **kwargs)
     logger.info(u'%s integration engine loaded. Build starting.', engine.display_name, project=project_name)
     services_to_build = kwargs.get('services_to_build') or services.keys()
+    logger.debug("Services to build", services_to_build=services_to_build)
     for service_name, service in services.items():
         if service_name not in services_to_build:
             logger.debug('Skipping service %s...', service_name)
