@@ -1,24 +1,38 @@
 Ansible Container has been contribued to by the following authors:
 This list is automatically generated - please file an issue for corrections)
 
-Joshua "jag" Ginsberg <jag@ansible.com>
 Chris Houseknecht <chouseknecht@ansible.com>
+Joshua "jag" Ginsberg <jag@ansible.com>
 Ryan Brown <sb@ryansb.com>
 Shubham Minglani <shubham@linux.com>
-Matt Clay <matt@mystile.com>
 Pierre-Louis Bonicoli <pierre-louis@libregerbil.fr>
+Matt Clay <matt@mystile.com>
 Greg DeKoenigsberg <greg.dekoenigsberg@gmail.com>
 Sandra Wills <swills@ansible.com>
 Dusty Mabe <dusty@dustymabe.com>
+<<<<<<< HEAD
 Charlie Drage <charlie@charliedrage.com>
+=======
+Eric D Helms <eric.d.helms@gmail.com>
+Josiah Goodson <josiah.goodson@gmail.com>
+Tomas Tomecek <ttomecek@redhat.com>
+Dominik del Bondio <dominik.del.bondio@bitextender.com>
+Marcus Levine <marcusianl@gmail.com>
+>>>>>>> upstream/develop
 Dylan Silva <thaumos@users.noreply.github.com>
 Fabian von Feilitzsch <fabianvf@users.noreply.github.com>
 Dominik del Bondio <dominik.del.bondio@bitextender.com>
 Roderick Randolph <roderickrandolph@users.noreply.github.com>
 Will Refvem <wbrefvem@gmail.com>
 Sebastien Plisson <sebastien.plisson@gmail.com>
+<<<<<<< HEAD
+=======
+Mike Hume <mhumeSF@gmail.com>
+Marius Gerling <marius.gerling@uniberg.com>
+>>>>>>> upstream/develop
 Gerard Braad <me@gbraad.nl>
 Evgeni Golov <evgeni@golov.de>
+Yutaka Kohada <y.kohada@gmail.com>
 Joseph Callen <jcpowermac@gmail.com>
 Will Thames <wthames@redhat.com>
 <<<<<<< HEAD
@@ -28,7 +42,11 @@ Vadim Rutkovsky <roignac@gmail.com>
 >>>>>>> upstream/develop
 Grzegorz Nosek <root@localdomain.pl>
 Abhishek Pratap Singh <abhishek@linux.com>
+<<<<<<< HEAD
 Vadim Rutkovsky <roignac@gmail.com>
+=======
+Marius Gerling <marius@gerl1ng.de>
+>>>>>>> upstream/develop
 Todd Barr <tbarr@ansible.com>
 Florian Dambrine <Lowess@users.noreply.github.com>
 Will Refvem <wbrefvem@users.noreply.github.com>
@@ -45,6 +63,10 @@ Alex Yanchenko <alex@yanchenko.com>
 Balazs Zagyvai <github.zagyi@spamgourmet.com>
 Trishna Guha <trishnaguha17@gmail.com>
 Ali Asad Lotia <ali.asad.lotia@gmail.com>
+<<<<<<< HEAD
+=======
+Erik Nelson <erik@nsk.io>
+>>>>>>> upstream/develop
 Chrrrles Paul <chrrrles@users.noreply.github.com>
 Andrea De Pirro <andrea.depirro@yameveo.com>
 <<<<<<< HEAD
